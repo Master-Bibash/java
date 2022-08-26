@@ -1,0 +1,51 @@
+//main 
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+       ArrayList<String> qual= new ArrayList<String>();
+       qual.add("obident");
+        qual.add("discipline");
+        qual.add("alone wolf");
+        Student bibash=new Student("bibash", 21, 16, "A+", qual);
+        bibash.display();
+        qual.clear();
+        qual.add("handsome");
+        qual.add("supportive");
+        qual.add("creative");
+        Student niraj=new Student("Niraj", 23, 3, "A", qual);
+        niraj.display();
+}
+}
+
+//Student
+import java.util.ArrayList;
+public class Student{
+    String name;
+    int age;
+    int grade;
+    String section;
+    ArrayList<String> quality;
+
+    public Student(String name,int age,int grade,String section,ArrayList<String> quality){
+        this.name=name;
+        this.age=age;
+        this.grade=grade;
+        this.section=section;
+        this.quality=quality;
+    }
+    public void display(){
+        System.out.println("studet name is "+name);
+        System.out.println("student age is "+age);
+        System.out.println("the grade of student is "+grade);
+        System.out.println("section is "+section);
+        for(String qualities:quality){
+            System.out.println("qualities are "+qualities);
+        }
+        System.out.println('\n');
+
+    }
+
+
+}
+
